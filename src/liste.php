@@ -16,7 +16,7 @@
 
     <!-- Navigasjons bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="#"><a href="/"><h1 class="logo">Wayfare</h1></a> <!-- Wayfare logo -->
+            <a class="navbar-brand" href="#"><a href="index.php"><h1 class="logo">Wayfare</h1></a> <!-- Wayfare logo -->
     
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
@@ -64,7 +64,7 @@
         <div class="text-center darken-grey-text mb-4">
             <h1 class="font-bold mt-4 mb-3 h5">Her finner du en oversikt over sjåfører som bruker Wayfare</h1>
             <a class="btn btn-primary btn-md" href="" target="_blank">Vil du bli sjåfør?<i class="fa fa-download pl-2"></i></a>
-            <a class="btn btn-primary btn-md" href="listeinput.html" target="_blank">Trykk her for å legge til din kjørerute<i class="fa fa-download pl-2"></i></a>
+            <a class="btn btn-primary btn-md" href="listeinput.php" target="_blank">Trykk her for å legge til din kjørerute<i class="fa fa-download pl-2"></i></a>
         </div>
 
         <div class="card mb-4">
@@ -209,111 +209,6 @@
         </div>
         </div>
 
-
-<!-- Footer -->
-<!-- Footer -->
-<footer class="page-footer font-small stylish-color-dark pt-4 bg-primary">
-
-        <!-- Footer Links -->
-        <div class="container text-center text-md-left text-white">
-    
-          <!-- Grid row -->
-          <div class="row">
-    
-            <!-- Grid column -->
-            <div class="col-md-4 mx-auto">
-    
-              <!-- Content -->
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Her finner du noen linker</h5>
-              <p>Her kan du finne ulike linker til steder på nettsiden, eller så kan du trykke på "Tilbake til toppen" knappen for å komme tilbake til toppen av nettsiden.</p>
-    
-            </div>
-            <!-- Grid column -->
-    
-            <hr class="clearfix w-100 d-md-none">
-    
-            <!-- Grid column -->
-            <div class="col-md-2 mx-auto">
-    
-              <!-- Links -->
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Linker</h5>
-    
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!">Hjem</a>
-                </li>
-                <li>
-                  <a href="#!">Hvordan bruke Wayfare?</a>
-                </li>
-                <li>
-                  <a href="#!">Spørsmål og svar</a>
-                </li>
-                <li>
-                  <a href="#!">Informasjon om Wayfare</a>
-                </li>
-              </ul>
-    
-            </div>
-            <!-- Grid column -->
-    
-            <hr class="clearfix w-100 d-md-none">
-    
-            <!-- Grid column -->
-            <div class="col-md-2 mx-auto">
-    
-              <!-- Links -->
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Linker</h5>
-    
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!">Din profil</a>
-                </li>
-                <li>
-                  <a href="#!">Bytte bruker</a>
-                </li>
-                <li>
-                  <a href="#!">Bruker oversikt</a>
-                </li>
-                <li>
-                  <a href="#!">Logg ut</a>
-                </li>
-              </ul>
-    
-            </div>
-            <!-- Grid column -->
-    
-            <hr class="clearfix w-100 d-md-none">
-            <!-- Grid column -->
-    
-          </div>
-          <!-- Grid row -->
-    
-        </div>
-        <!-- Footer Links -->
-    
-        <hr>
-    
-        <ul class="list-unstyled list-inline text-center py-2">
-          <li class="list-inline-item">
-            <h5 class="mb-1"></h5>
-          </li>
-          <li class="list-inline-item">
-            <a href="#!" class="btn btn-danger btn-rounded">Tilbake til toppen</a>
-          </li>
-        </ul>
-    
-        <hr>
-    
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 text-white">© 2019 Copyright:
-          <a href="index.php"> Wayfare.no</a>
-        </div>
-        <!-- Copyright -->
-    
-    </footer>
-    <!-- Footer -->
-
-  </body>
-
-
-</html>
+<?php 
+    include_once "include/footer.php";
+?>

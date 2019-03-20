@@ -1,5 +1,5 @@
 <?php 
-  include_once "header.php"; 
+  include_once "include/header.php"; 
 
   ?>
     <title>Wayfare - Kjøreliste</title>
@@ -44,10 +44,10 @@
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Registrer / Login</a>
+                        <a class="nav-link" href="login.php">Registrer / Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="liste.html">Kjøreliste</a>
+                        <a class="nav-link" href="liste.php">Kjøreliste</a>
                     </li>
                 </ul>
             </div>

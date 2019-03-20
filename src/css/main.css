@@ -15,7 +15,8 @@
 }
 
 html body{
-    background-color: #f9fafc;
+    background-color: #f9fafc; 
+    /* background-color: white; */ 
 }
 
 .jumbotron {
