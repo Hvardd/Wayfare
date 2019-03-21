@@ -3,44 +3,57 @@ if (isset($_POST['submit'])) {
 
 	include_once 'dbh.inc.php';
 
-	$first = mysqli_real_escape_string($conn,$_POST['first']);
-	$last = mysqli_real_escape_string($conn,$_POST['last']);
+	$navn = mysqli_real_escape_string($conn,$_POST['navn']);
 	$email = mysqli_real_escape_string($conn,$_POST['email']);
-	$uid = mysqli_real_escape_string($conn,$_POST['uid']);
-	$pwd = mysqli_real_escape_string($conn,$_POST['pwd']);
+	$tlf = mysqli_real_escape_string($conn,$_POST['tlf']);
+	$brukertype = mysqli_real_escape_string($conn,$_POST['brukertype']);
+	$passord = mysqli_real_escape_string($conn,$_POST['passord']);
 
 	// Error handlers
 
 	// Check for empty fields
-	if(empty($first)||empty($last)||empty($email)||empty($uid)||empty($pwd)){
-		header("Location: ../signup.php?signup=empty");
+	if(empty($navn)||empty($email)||empty($tlf)||empty($brukertype)||empty($passord)){
+		header("Location: ../registrer.php?signup=empty");
 		exit();
 		} else {
 		//Check if input characters are valid
-		if (!preg_match("/^[a-zA-Z]*$/", $first)||!preg_match("/^[a-zA-Z]*$/", $last)) {
-			header("Location: ../signup.php?signup=invalid");
+		if (!preg_match("/^[a-zA-Z]*$/", $navn)) { //||!preg_match("/^[a-zA-Z]*$/", $last)) {
+			header("Location: ../registrer.php?signup=invalid");
+			exit();
+			}
+		elseif ($brukertype == "Velg Wayfare bruker type")  {
+			header("Location: ../registrer.php?signup=brukertypefeil");
 			exit();
 		} else {
 			// Check if email is valid
 			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-				header("Location: ../signup.php?signup=email");	
+				header("Location: ../registrer.php?signup=email");	
 				exit();
 				# code ... 
 			} else {
-				$sql = "SELECT * FROM users WHERE user_uid='$uid'";
+				$sql = "SELECT * FROM users WHERE user_email='$email'";
 				$result = mysqli_query($conn, $sql);
 				$resultCheck = mysqli_num_rows($result);
 
+				$sql = "SELECT * FROM users WHERE user_tlf='$tlf'";
+				$result2 = mysqli_query($conn, $sql);
+				$resultCheck2 = mysqli_num_rows($result2);
+
 				if ($resultCheck > 0) {
-				 	header("Location: ../signup.php?signup=usertaken");
-				 	exit();
+				 	header("Location: ../registrer.php?signup=emailtaken");
+				 	exit(); 
+				 }
+				elseif ($resultCheck2 > 0) {
+					header("Location: ../registrer.php?signup=phonenumbertaken");
+					exit();
+				 
 				} else {
 					// hashing the password
-					$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+					$hashedPwd = password_hash($passord, PASSWORD_DEFAULT);
 					// Insert the user into the database
-					$sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) VALUES ('$first','$last','$email', '$uid', '$hashedPwd');";
+					$sql = "INSERT INTO users (user_first, user_email,user_tlf, user_brukertype, user_passord) VALUES ('$navn','$email','$tlf', '$brukertype','$hashedPwd');";
 					mysqli_query($conn, $sql);
-					header("Location: ../header.php?signup=success");
+					header("Location: ../index.php?signup=success");
 					exit();
 				}
 
@@ -50,7 +63,7 @@ if (isset($_POST['submit'])) {
 	}
 
 } else {
-	header("Location: ../signup.php");
+	header("Location: ../registrer.php?signup=error");
 	exit();
 }
 

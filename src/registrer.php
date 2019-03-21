@@ -24,30 +24,30 @@
 
             </p>
             </p>
-            <form>
+            <form action="include/signup.inc.php" method="POST">
             <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                  </div>
-                <input name="" class="form-control" placeholder="Navn" type="text">
+                <input name="navn" class="form-control" placeholder="Navn" type="text">
             </div> <!-- form-group// -->
             <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                  </div>
-                <input name="" class="form-control" placeholder="Email addresse" type="email">
+                <input name="email" class="form-control" placeholder="Email addresse" type="email">
             </div> <!-- form-group// -->
             <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                 </div>
-                <input name="" class="form-control" placeholder="Telefonnummer" type="text">
+                <input name="tlf" class="form-control" placeholder="Telefonnummer" type="text">
             </div> <!-- form-group// -->
             <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-building"></i> </span>
                 </div>
-                <select class="form-control">
+                <select class="form-control" name="brukertype">
                     <option selected=""> Velg Wayfare bruker type</option>
                     <option>Sjåfør</option>
                     <option>Passasjer</option>
@@ -58,16 +58,16 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>
-                <input class="form-control" placeholder="Velg passord" type="password">
+                <input name="passord" class="form-control" placeholder="Velg passord" type="password">
             </div> <!-- form-group// -->
             <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>
-                <input class="form-control" placeholder="Repeter Passord" type="password">
+                <input name="passord2" class="form-control" placeholder="Repeter Passord" type="password">
             </div> <!-- form-group// -->                                      
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block"> Fullfør  </button>
+                <button type="submit" name="submit" class="btn btn-primary btn-block"> Fullfør  </button>
             </div> <!-- form-group// -->      
             <p class="text-center">Har du en bruker? <a href="login.php">Logg Inn</a> </p>                                                                 
         </form>
