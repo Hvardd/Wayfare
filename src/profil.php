@@ -41,9 +41,9 @@
                         </div>
                     </li>
     
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.php">Registrer / Login</a>
-                    </li>
+                    <?php 
+                    include_once "include/navcheck.php";
+                    ?>
                     <li class="nav-item">
                         <a class="nav-link" href="liste.php">Kjøreliste</a>
                     </li>

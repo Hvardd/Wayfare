@@ -28,20 +28,20 @@
         <section class="row justify-content-center">
           <section class="col-12 col-sm6 col-md-3">
             <!-- Login form -->
-              <form class="form-container">
+              <form class="form-container" action="include/login.inc.php" method="POST">
                 <button type="button" class="btn btn-primary" onclick="location.href='index.php';">Gå tilbake</button>
                 <h3 class="text-center">Log inn</h3>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email addresse</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Skriv inn email">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Skriv inn email">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Passord</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Passord">
+                    <input type="password" name="passord" class="form-control" id="exampleInputPassword1" placeholder="Passord">
                   </div>
                   <div class="form-group form-check">
                   </div>
-                  <button type="submit" class="btn btn-primary btn-block">Logg inn</button>
+                  <button type="submit" name="submit" class="btn btn-primary btn-block">Logg inn</button>
                   <p class="text-black text-center">Har du ikke bruker? <br> Trykk <a href="registrer.php">her</a> for å registrere</p>
                 </form>
 

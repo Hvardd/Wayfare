@@ -1,40 +1,41 @@
 <?php
 
-session_start();
+ session_start();
 
 if (isset($_POST['submit'])) {
 
 	include 'dbh.inc.php';
 
-	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
-	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
+	$email = mysqli_real_escape_string($conn, $_POST['email']);
+	$passord = mysqli_real_escape_string($conn, $_POST['passord']);
 
-	if (empty($uid)||empty($pwd)){
-		header("Location: ../index.php?login=empty");
+	if (empty($email)||empty($passord)){
+		header("Location: ../login.php?login=empty");
 		exit();
  } else {
- 	$sql = "SELECT * FROM users WHERE user_uid='$uid' or user_email='$uid'";
+ 	$sql = "SELECT * FROM users WHERE user_first='$email' or user_email='$email'";
  	$result = mysqli_query($conn, $sql);
  	$resultCheck = mysqli_num_rows($result);
  	
  	if ($resultCheck < 1) {
- 		header("Location: ../index.php?login=error");
+ 		header("Location: ../login.php?login=error1");
  		exit();
  	} else {
  		if ($row = mysqli_fetch_assoc($result)) {
  		 	// echo $row['user_uid'];
  		 	//De-hasing the password
- 		 	$hashedPwdCheck = password_verify($pwd, $row['user_pwd']);
+
+ 		 	$hashedPwdCheck = password_verify($passord, $row['user_passord']);
  		 	if ($hashedPwdCheck == false) {
- 		 		header("Location: ../index.php?login=error");
+ 		 		header("Location: ../login.php?login=error2");
  		 		exit();
  		 	} elseif ($hashedPwdCheck == true) {
  		 	 	//Log in the user here
- 		 	 	$_SESSION['u_id'] = $row['user_id'];
- 		 	 	$_SESSION['u_first'] = $row['user_first'];
- 		 	 	$_SESSION['u_last'] = $row['user_last'];
+ 		 	 	$_SESSION['u_name'] = $row['user_name'];
  		 	 	$_SESSION['u_email'] = $row['user_email'];
- 		 	 	$_SESSION['u_uid'] = $row['user_uid'];
+ 		 	 	$_SESSION['u_tlf'] = $row['user_tlf'];
+ 		 	 	$_SESSION['u_brukertype'] = $row['user_brukertype'];
+ 		 	 	//$_SESSION['u_uid'] = $row['user_uid'];
  		 	 	header("Location: ../index.php?login=success");
  		 	 	exit();
  		 	}
@@ -42,6 +43,6 @@ if (isset($_POST['submit'])) {
  	}
  }
 } else {
-	header("Location: ../index.php?login=error");
+	header("Location: ../login.php?login=error3");
 	exit();
 }
