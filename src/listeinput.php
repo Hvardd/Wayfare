@@ -1,7 +1,18 @@
-<?php 
-  include_once "include/header.php"; 
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  ?>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+    <!-- Vanlig CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
     <title>Wayfare - Kjøreliste</title>
   </head>
   <body>
@@ -44,10 +55,10 @@
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link" href="login.php">Registrer / Login</a>
+                        <a class="nav-link" href="login.html">Registrer / Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="liste.php">Kjøreliste</a>
+                        <a class="nav-link" href="liste.html">Kjøreliste</a>
                     </li>
                 </ul>
             </div>
@@ -60,34 +71,40 @@
    <!-- Hoved container -->
    <section class="container-fluid">
       
+
         <section class="row justify-content-center">
           <section class="col-12 col-sm6 col-md-3">
             <!-- Login form -->
-              <form class="form-container">
+              <form class="form-container" action="php/insert.php" method="post">
                 <h3 class="text-center">Legg til din kjørerute</h3>
 
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Kjører fra:</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Skriv inn email">
-                  </div>
+                   <div class="form-group">
+                   <label for="exampleInputEmail1">Navn:</label>
+                   <input type="text" name="Navn" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Skriv ditt navn">
+                   </div>
 
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Kjører til:</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Passord">
-                  </div>
+                   <div class="form-group">
+                   <label for="exampleInputEmail1">Kjører fra:</label>
+                   <input type="text" name="Start" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Hvor kjører du fra?">
+                   </div>
 
-                  <div class="form-group">
-                        <label for="exampleInputPassword1">Dato:</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Passord">
-                      </div>
+                   <div class="form-group">
+                   <label for="exampleInputPassword1">Kjører til:</label>
+                   <input type="text" name="Slutt" class="form-control" id="exampleInputPassword1" placeholder="Hvor kjører du til?">
+                   </div>
 
-                  <div class="form-group">
-                        <label for="exampleInputPassword1">Pris:</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Passord">
-                      </div>
+                   <div class="form-group">
+                   <label for="exampleInputPassword1">Dato:</label>
+                   <input type="text" name="Dato" class="form-control" id="exampleInputPassword1" placeholder="Når kjører du?">
+                   </div>
+
+                   <div class="form-group">
+                   <label for="exampleInputPassword1">Pris:</label>
+                   <input type="text" name="Pris" class="form-control" id="exampleInputPassword1" placeholder="Pris">
+                   </div>
 
 
-                  <button type="submit" class="btn btn-primary btn-block">Fullfør og legg til kjøreliste</button>
+                  <input type="submit" value="Fullfør og legg til kjøreliste" class="btn btn-primary btn-block"></button>
                 </form>
 
           </section>
