@@ -5,7 +5,7 @@
      echo  'Not connected to server';
  }
 
- if(!mysqli_select_db($con, 'wayfaredb')){
+ if(!mysqli_select_db($con, 'Wayfare')){
      echo 'Database not selected';
  }
 
@@ -20,11 +20,13 @@
  if(!mysqli_query($con, $sql))
  {
     echo 'Not inserted';
+    header("Location: ../liste.php?not_inserted");
  }
  else
  {
     echo 'Inserted';
+    header("Location: ../liste.php?inserted");
  }
 
-// header("refresh:2; url=liste.php");
+ // header("refresh:2; url=liste.php");
 ?>

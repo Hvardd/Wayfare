@@ -1,7 +1,7 @@
 <?php
 
 function FyllListe () {
-    $conn = mysqli_connect("localhost", "root", "", "wayfaredb");
+    $conn = mysqli_connect("localhost", "root", "", "Wayfare");
   // Check connection
   if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
@@ -12,7 +12,7 @@ function FyllListe () {
    // output data of each row
    while($row = $result->fetch_assoc()) {
     echo "<tr><td>" . $row["Fornavn"]."</td><td>" . $row["Start"] . "</td><td>" . $row["Slutt"] . "</td><td>" . $row["Dato"] . "</td><td>"
-. $row["Pris"]. "</td></tr>";
+. $row["Pris"].",-". "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }

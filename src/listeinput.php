@@ -1,18 +1,7 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php 
+  include_once "include/header.php"; 
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
-
-    <!-- Vanlig CSS -->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
+  ?>
     <title>Wayfare - Kjøreliste</title>
   </head>
   <body>
@@ -55,10 +44,10 @@
                     </li>
     
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Registrer / Login</a>
+                        <a class="nav-link" href="login.php">Registrer / Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="liste.html">Kjøreliste</a>
+                        <a class="nav-link" href="liste.php">Kjøreliste</a>
                     </li>
                 </ul>
             </div>
@@ -71,11 +60,10 @@
    <!-- Hoved container -->
    <section class="container-fluid">
       
-
         <section class="row justify-content-center">
           <section class="col-12 col-sm6 col-md-3">
             <!-- Login form -->
-              <form class="form-container" action="php/insert.php" method="post">
+                 <form class="form-container" action="php/insert.php" method="post">
                 <h3 class="text-center">Legg til din kjørerute</h3>
 
                    <div class="form-group">
@@ -114,6 +102,9 @@
 
 <!-- Footer -->
 <!-- Footer -->
+<?php include_once "include/footer.php"?>
+
+<?php /* 
 <footer class="page-footer font-small stylish-color-dark pt-4 bg-primary">
 
         <!-- Footer Links -->
@@ -218,4 +209,4 @@
   </body>
 
 
-</html>
+</html> */ ?>
