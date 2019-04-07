@@ -31,10 +31,10 @@ if (isset($_POST['submit'])) {
  		 		exit();
  		 	} elseif ($hashedPwdCheck == true) {
  		 	 	//Log in the user here
- 		 	 	$_SESSION['u_name'] = $row['user_name'];
- 		 	 	$_SESSION['u_email'] = $row['user_email'];
- 		 	 	$_SESSION['u_tlf'] = $row['user_tlf'];
- 		 	 	$_SESSION['u_brukertype'] = $row['user_brukertype'];
+ 		 	 	$_SESSION['user_first'] = $row['user_first'];
+ 		 	 	$_SESSION['user_email'] = $row['user_email'];
+ 		 	 	$_SESSION['user_tlf'] = $row['user_tlf'];
+ 		 	 	$_SESSION['user_brukertype'] = $row['user_brukertype'];
  		 	 	//$_SESSION['u_uid'] = $row['user_uid'];
  		 	 	header("Location: ../index.php?login=success");
  		 	 	exit();

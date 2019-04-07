@@ -71,10 +71,16 @@
                 <div class="col-md-6">
                     <div class="profile-head">
                                 <h5>
-                                    Default Sjåfør
+                                    <?php if(isset($_SESSION['user_first'])) 
+                                      echo $_SESSION['user_first'];
+                                      else 
+                                      echo "Default"; ?>
                                 </h5>
                                 <h6>
-                                    Sjåfør
+                                    <?php if(isset($_SESSION['user_brukertype'])) 
+                                      echo $_SESSION['user_brukertype'];
+                                      else 
+                                      echo "Default"; ?>
                                 </h6>
                                 <p class="proile-rating">Kvalitet: <span>8/10</span></p> 
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -95,7 +101,10 @@
                 <div class="col-md-4">
                     <div class="profile-work text-center">
                         <h3>Informasjon</h3>
-                        <p>Telefon Nummer: 95095095</p><br/>
+                        <p>Telefon Nummer:  <?php if(isset($_SESSION['user_tlf'])) 
+                                      echo $_SESSION['user_tlf'];
+                                      else 
+                                      echo "Default"; ?></p><br/>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -106,7 +115,10 @@
                                             <label>Brukernavn</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>DefaultSjåfør123</p>
+                                            <p> <?php if(isset($_SESSION['user_first'])) 
+                                      echo $_SESSION['user_first'];
+                                      else 
+                                      echo "Default"; ?></p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -114,7 +126,10 @@
                                             <label>Navn</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>Default Sjåfør</p>
+                                            <p> <?php if(isset($_SESSION['user_first'])) 
+                                      echo $_SESSION['user_first'];
+                                      else 
+                                      echo "Default"; ?></p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -122,7 +137,10 @@
                                             <label>Email</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>Default-Sjåfør@gmail.com</p>
+                                            <p> <?php if(isset($_SESSION['user_email'])) 
+                                      echo $_SESSION['user_email'];
+                                      else 
+                                      echo "Default"; ?></p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -130,7 +148,10 @@
                                             <label>Telefon Nummer:</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>123 456 7890</p>
+                                            <p> <?php if(isset($_SESSION['user_tlf'])) 
+                                      echo $_SESSION['user_tlf'];
+                                      else 
+                                      echo "Default"; ?></p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -138,7 +159,10 @@
                                             <label>Tildelt jobb:</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>Sjåfør</p>
+                                            <p> <?php if(isset($_SESSION['user_brukertype'])) 
+                                      echo $_SESSION['user_brukertype'];
+                                      else 
+                                      echo "Default"; ?></p>
                                         </div>
                                     </div>
                         </div>

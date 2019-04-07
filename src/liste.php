@@ -64,7 +64,10 @@
 
         <div class="text-center darken-grey-text mb-4">
             <h1 class="font-bold mt-4 mb-3 h5">Her finner du en oversikt over sjåfører som bruker Wayfare</h1>
-            <a class="btn btn-primary btn-md" href="" target="_blank">Vil du bli sjåfør?<i class="fa fa-download pl-2"></i></a>
+            <?php if(!isset($_SESSION['user_first'])) 
+              echo '<a class="btn btn-primary btn-md" href="registrer.php" target="_blank">Vil du bli sjåfør?<i class="fa fa-download pl-2"></i></a>';
+              
+            ?>
             <a class="btn btn-primary btn-md" href="listeinput.php" target="_blank">Trykk her for å legge til din kjørerute<i class="fa fa-download pl-2"></i></a>
         </div>
 
