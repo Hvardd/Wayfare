@@ -6,6 +6,7 @@
   </head>
   <body>
     <!-- Optional JavaScript -->
+    <script type="text/javascript" src="js/SøkListe.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -79,7 +80,7 @@
                     <div class="col-md-12">
                         <h2 class="pt-3 pb-4 text-center font-bold font-up deep-purple-text">Søk her...</h2>
                         <div class="input-group md-form form-sm form-2 pl-0">
-                            <input class="form-control my-0 py-1 pl-3 purple-border" type="text" placeholder="Søk her..." aria-label="Search">
+                        <input class="form-control my-0 py-1 pl-3 purple-border" type="text" onkeyup="SøkListe()" placeholder="Søk etter din destinasjon her..." aria-label="Search" id="listeInput">
                             <span class="input-group-addon waves-effect purple lighten-2" id="basic-addon1"><a><i class="fa fa-search white-text" aria-hidden="true"></i></a></span>
                         </div>
                     </div>
@@ -89,7 +90,7 @@
                 <!-- Grid row -->
                 <!--Table-->
                 <div class="liste">
-                <table class="table table-hover">
+                <table class="table table-hover" id="kjoreListe">
                     <!--Table head-->
                     <thead>
                         <tr>
@@ -103,14 +104,7 @@
                     <!--Table head-->
                     <!--Table body-->
                     <tbody>
-                       <!--  <tr>
-                            <td>TorKristian Slåtta Kåsene</td>
-                            <td>Bø</td>
-                            <td>Lunde</td>
-                            <td>19.01.2019</td>
-                            <td>250,-</td>
-                            <td><button class="btn btn-primary">Velg</button></td>
-                        </tr> -->
+
                         
                         <?php
                              include "php/FyllListe.php";

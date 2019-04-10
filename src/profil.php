@@ -2,7 +2,7 @@
   include_once "include/header.php"; 
 
   ?>
-    <title>Login</title>
+    <title>Wayfare- Profil side</title>
   </head>
   <body>
     <!-- Optional JavaScript -->
@@ -29,16 +29,8 @@
                         <a class="nav-link" href="profil.php">Profil</a>
                     </li>
     
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
-                            Kontakt
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Product 1</a>
-                            <a class="dropdown-item" href="#">Product 2</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Another Product</a>
-                        </div>
+                    <li class="nav-item">
+                    <a class="nav-link" href="kontakt.php"> Kontakt </a>
                     </li>
     
                     <?php 
@@ -90,6 +82,10 @@
                             <li class="nav-item">
                                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Statistikk</a>
                             </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#meldinger" role="tab" aria-controls="meldinger" aria-selected="false">Meldinger</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -107,7 +103,11 @@
                                       echo "Default"; ?></p><br/>
                     </div>
                 </div>
+
+                
                 <div class="col-md-8">
+
+                <!-- 'Om meg' Tab -->
                     <div class="tab-content profile-tab" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                     <div class="row">
@@ -166,6 +166,8 @@
                                         </div>
                                     </div>
                         </div>
+
+                        <!-- Statistikk Tab -->
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -191,7 +193,19 @@
                                             <p>1</p>
                                         </div>
                                     </div>
+                            </div>
+
+                            <!-- Melding Tab -->
+                             <div class="tab-pane fade" id="meldinger" role="tabpanel" aria-labelledby="meldinger-tab">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Meldinger</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>5</p>
+                                        </div>
                                     </div>
+                            </div>
                         </div>
                     </div>
                 </div>
