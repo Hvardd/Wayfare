@@ -57,7 +57,7 @@
 
    <!-- Hoved container -->
    <div class="container emp-profile shadow-lg mb-5 bg-white rounded">
-        <form method="post">
+        <form method="post" action="php/endreprofilen.php">
             <div class="row">
                 <div class="col-md-4">
                     <div class="profile-img">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <input type="button" class="profile-edit-btn" name="btnAddMore" value="Endre profil" onclick="location.href='endreprofil.php';" >   
+                    <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Fullfør"/>
                 </div>
             </div>
             <div class="row">
@@ -115,10 +115,12 @@
                                             <label>Brukernavn</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p> <?php if(isset($_SESSION['user_first'])) 
+                                            <!-- p> ?php if(isset($_SESSION['user_first'])) 
                                       echo $_SESSION['user_first'];
                                       else 
-                                      echo "Default"; ?></p>
+                                      echo "Default"; ?></p> -->
+                                       <input type="text" name="username" value="<?php if(isset($_SESSION['user_first'])) 
+                                      echo $_SESSION['user_first']; ?> ">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -126,10 +128,13 @@
                                             <label>Navn</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p> <?php if(isset($_SESSION['user_first'])) 
+                                            <!-- p> ?php if(isset($_SESSION['user_first'])) 
                                       echo $_SESSION['user_first'];
                                       else 
-                                      echo "Default"; ?></p>
+                                      echo "Default"; ?></p -->
+                                         <input type="text" name="" value="<?php if(isset($_SESSION['user_first'])) 
+                                      echo $_SESSION['user_first'];
+                                      ?> ">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -137,10 +142,13 @@
                                             <label>Email</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p> <?php if(isset($_SESSION['user_email'])) 
+                                            <!-- p> ?php if(isset($_SESSION['user_email'])) 
                                       echo $_SESSION['user_email'];
                                       else 
-                                      echo "Default"; ?></p>
+                                      echo "Default"; ?></p -->
+                                      <input type="text" name="email" value="<?php if(isset($_SESSION['user_email'])) 
+                                      echo $_SESSION['user_email'];
+                                      ?> ">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -148,10 +156,13 @@
                                             <label>Telefon Nummer:</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p> <?php if(isset($_SESSION['user_tlf'])) 
+                                            <!-- p> ?php if(isset($_SESSION['user_tlf'])) 
                                       echo $_SESSION['user_tlf'];
                                       else 
-                                      echo "Default"; ?></p>
+                                      echo "Default"; ?></p -->
+                                        <input type="text" name="phonenumber" value="<?php if(isset($_SESSION['user_tlf'])) 
+                                      echo $_SESSION['user_tlf'];
+                                      ?> ">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -159,11 +170,24 @@
                                             <label>Tildelt jobb:</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p> <?php if(isset($_SESSION['user_brukertype'])) 
+                                            <!-- p> ?php if(isset($_SESSION['user_brukertype'])) 
                                       echo $_SESSION['user_brukertype'];
                                       else 
-                                      echo "Default"; ?></p>
+                                      echo "Default"; ?></p -->
+                                      <input type="text" name="usertype" value="<?php if(isset($_SESSION['user_brukertype'])) 
+                                      echo $_SESSION['user_brukertype'];
+                                      ?> ">
+                                      </div>
+                                    </div>
+
+                                      <div class="row">
+                                      <div class="col-md-6">
+                                            <label> Skriv inn passord: </label>
                                         </div>
+                                        <div class="col-md-6">
+                                      <input type="password" name="password" value="">
+                                        </div>
+                                      </div>
                                     </div>
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
