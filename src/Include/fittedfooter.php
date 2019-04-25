@@ -1,6 +1,6 @@
 
 <!-- Footer -->
-<footer class="footerHover extendedFooter page-footer font-small stylish-color-dark pt-4 bg-primary">
+<footer class="footerHover page-footer font-small stylish-color-dark pt-4 bg-primary">
 
         <!-- Footer Links -->
         <div class="footerHover container text-center text-md-left text-white">

@@ -1,29 +1,50 @@
 <?php 
-  include_once "include/header.php"; 
-
-  ?>
+  include_once "Include/header.php"; 
   
-    <title>Login</title>
+?>
+    <title >Wayfare- Hjemmeside  </title>
   </head>
-  <body class="loginBody">
+  <link rel="icon" href="assets/tab-icon.png" sizes="2x2">
+  <body class="kontaktBody" >
     <!-- Optional JavaScript -->
+    <script type="text/javascript" src="js/TopScroll.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    
   
 
     <!-- Navigasjons bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
-      <ul class="nav navbar-nav mx-auto">
-          <a class="navbar-brand" href="#"><a href="index.php"><h1 class="logo">Wayfare</h1></a> <!-- Wayfare logo -->
-      </ul>
-
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"><a href="index.php"><h1 class="logo">Wayfare</h1></a> <!-- Wayfare logo -->
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
         </button>
         
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Hjem</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profil.php">Profil</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="kontakt.php"> Kontakt </a>
+                </li>
+
+                <?php 
+                  include_once "include/navcheck.php";
+                  ?>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="liste.php">Kjøreliste</a>
+                </li>
+            </ul>
         </div>
     </nav>
    <!-- Navigasjons bar slutt -->
@@ -32,156 +53,82 @@
 
 
    <!-- Hoved container -->
-   <div class="container shadow-lg p-3 mb-5 bg-white rounded mt-5">
-        <div class="row justify-content-center">
-          <div class="col-md-6 col-md-offset-3">
-            <div class="well well-sm">
-              <form class="form-horizontal" action="" method="post">
-              <fieldset>
-                <legend class="text-center">Contact us</legend>
-        
-                <!-- Name input-->
-                <div class="form-group">
-                  <label class="col-md-3 control-label" for="name">Name</label>
-                  <div class="col-md-9">
-                    <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
-                  </div>
-                </div>
-        
-                <!-- Email input-->
-                <div class="form-group">
-                  <label class="col-md-3 control-label" for="email">Your E-mail</label>
-                  <div class="col-md-9">
-                    <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
-                  </div>
-                </div>
-        
-                <!-- Message body -->
-                <div class="form-group">
-                  <label class="col-md-3 control-label" for="message">Your message</label>
-                  <div class="col-md-9">
-                    <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
-                  </div>
-                </div>
-        
-                <!-- Form actions -->
-                <div class="form-group">
-                  <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                  </div>
-                </div>
-              </fieldset>
-              </form>
-            </div>
-          </div>
-        </div>
-    </div>
-
-
-
-<!-- Footer -->
-<footer class="page-footer font-small stylish-color-dark pt-4 bg-primary">
-
-        <!-- Footer Links -->
-        <div class="container text-center text-md-left text-white">
-    
-          <!-- Grid row -->
+   <div class="jumbotron jumbotron-sm kontaktContainer kontaktJumbotron bg-white">
+      <div class="container">
           <div class="row">
-    
-            <!-- Grid column -->
-            <div class="col-md-4 mx-auto">
-    
-              <!-- Content -->
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Her finner du noen linker</h5>
-              <p>Her kan du finne ulike linker til steder på nettsiden, eller så kan du trykke på "Tilbake til toppen" knappen for å komme tilbake til toppen av nettsiden.</p>
-    
-            </div>
-            <!-- Grid column -->
-    
-            <hr class="clearfix w-100 d-md-none">
-    
-            <!-- Grid column -->
-            <div class="col-md-2 mx-auto">
-    
-              <!-- Links -->
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Linker</h5>
-    
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!">Hjem</a>
-                </li>
-                <li>
-                  <a href="#!">Hvordan bruke Wayfare?</a>
-                </li>
-                <li>
-                  <a href="#!">Spørsmål og svar</a>
-                </li>
-                <li>
-                  <a href="#!">Informasjon om Wayfare</a>
-                </li>
-              </ul>
-    
-            </div>
-            <!-- Grid column -->
-    
-            <hr class="clearfix w-100 d-md-none">
-    
-            <!-- Grid column -->
-            <div class="col-md-2 mx-auto">
-    
-              <!-- Links -->
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Linker</h5>
-    
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!">Din profil</a>
-                </li>
-                <li>
-                  <a href="#!">Bytte bruker</a>
-                </li>
-                <li>
-                  <a href="#!">Bruker oversikt</a>
-                </li>
-                <li>
-                  <a href="#!">Logg ut</a>
-                </li>
-              </ul>
-    
-            </div>
-            <!-- Grid column -->
-    
-            <hr class="clearfix w-100 d-md-none">
-            <!-- Grid column -->
-    
+              <div class="col-sm-12 col-sm-12">
+                  <h1 class="h1"><small>Kontakt oss!</small></h1>
+              </div>
           </div>
-          <!-- Grid row -->
-    
-        </div>
-        <!-- Footer Links -->
-    
-        <hr>
-    
-        <ul class="list-unstyled list-inline text-center py-2">
-          <li class="list-inline-item">
-            <h5 class="mb-1"></h5>
-          </li>
-          <li class="list-inline-item">
-            <a href="#!" class="btn btn-danger btn-rounded">Tilbake til toppen</a>
-          </li>
-        </ul>
-    
-        <hr>
-    
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 text-white">© 2019 Copyright:
-          <a href="index.html"> Wayfare.no</a>
-        </div>
-        <!-- Copyright -->
-    
-    </footer>
-    <!-- Footer -->
+      </div>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-8">
+              <div class="well well-sm">
+                  <form>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="name">
+                                  Navn</label>
+                                  <div class="input-group">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
+                                  </span>
+                              <input type="text" class="form-control" id="name" placeholder="Tast inn navnet ditt" required="required" /></div>
+                          </div>
+                          <div class="form-group">
+                              <label for="email">
+                                  Email Adresse</label>
+                              <div class="input-group">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                  </span>
+                                  <input type="email" class="form-control" id="email" placeholder="Tast inn email adressen din" required="required" /></div>
+                          </div>
+                          <div class="form-group">
+                              <label for="subject">
+                                  Mobil Nr.</label>
+                              <div class="input-group">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span>
+                                  </span>
+                                  <input type="phone" class="form-control" id="phone" placeholder="Tast inn ditt telefonnummer (ikke nødvendig)"/></div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="name">
+                                  Melding</label>
+                              <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                  placeholder="Tast inn meldingen din her"></textarea>
+                          </div>
+                      </div>
+                      <div class="form-group">
+  
+                          <div class="col-md-12">
+                              <button type="submit" class="btn btn-warning pull-right bg-primary">Send</button>
+                          </div>
+                      </div>
+                  </div>
+                  </form>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <form>
+              <legend><span class="glyphicon glyphicon-globe"></span> Vår mail og nettside</legend>
+              <address>
+                  <strong>Wayfare.no</strong><br>
+                  <abbr title="Telefon Nummer">
+                      Tlf: 950959595</abbr>
+                  
+              </address>
+              <address>
+                  Mail: <a href="mailto:#">WayfareAS@hotmail.com</a>
+              </address>
+              </form>
+          </div>
+      </div>
+  </div>
 
-  </body>
-
-
-</html>
+<?php 
+  include_once "include/footer.php";
+  ?>

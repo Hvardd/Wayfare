@@ -18,6 +18,6 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <?php if(isset($_SESSION['user_first'])) 
-    echo "Logged in as: " . $_SESSION['user_email']; 
+    echo "<p style='color:white'> Logged in as: " . $_SESSION['user_email'] . "</p>"; 
     ?> 
 

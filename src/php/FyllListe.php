@@ -13,8 +13,8 @@ function FyllListe () {
     $btnCounter = 0; // Teller for navn på hver knapp iforhold til sql listen 
    while($row = $result->fetch_assoc()) {
     $btnCounter++;
-    echo "<tr><td>" . $row["Fornavn"]."</td><td>" . $row["Start"] . "</td><td>" . $row["Slutt"] . "</td><td>" . $row["Dato"] . "</td><td>"
-. $row["Pris"].",-". "</td><td><button class='btn btn-primary' name='$btnCounter'>Velg</button></td></tr>"; 
+    echo "<form method='POST' action='listeavansert.php'><tr><td>" . $row["Fornavn"]."</td><td>" . $row["Start"] . "</td><td>" . $row["Slutt"] . "</td><td>" . $row["Dato"] . "</td><td>"
+. $row["Pris"].",-". "</td><td><button type='submit' class='btn btn-primary' name='$btnCounter'>Velg</button></td></tr></form>"; 
 }
 echo "</table>";
 } else { echo "0 results"; }

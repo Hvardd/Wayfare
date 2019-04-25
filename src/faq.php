@@ -5,7 +5,7 @@
     <title >Wayfare- Hjemmeside  </title>
   </head>
   <link rel="icon" href="assets/tab-icon.png" sizes="2x2">
-  <body >
+  <body class="faqBody">
     <!-- Optional JavaScript -->
     <script type="text/javascript" src="js/TopScroll.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -50,62 +50,67 @@
    <!-- Navigasjons bar slutt -->
    <!--------------------------->
 
-
+   
 
    <!-- Hoved container -->
-   <div class="indexContainer container">
+   <div class="container faqcontainer">
 
+  <h2>Ofte stilte spørsmål</h2>
 
-<!-- Jumbotron feltet som inneholder velkommen delen av nettsiden -->
-<div class="jumbotron text-center bg-transparent indexContainerWayfareText">
-  <h1 class="wfVelkommen">Velkommen til Wayfare!</h1>
+  <div class="accordion">
+    <div class="accordion-item">
+      <a>Lorem ipsum dolor sit amet</a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>Lorem ipsum dolor sit amet</a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>Lorem ipsum dolor sit amet</a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>Lorem ipsum dolor sit amet</a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <a>Lorem ipsum dolor sit amet</a>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
+<script>
+const items = document.querySelectorAll(".accordion a");
 
-<!-- Rad bortover nettsiden -->
-<div class="row indexRow bg-transparent ">
-    <div class="col"> <!-- Columns med lik bredde -->
-      <div class="col"> <!-- Columns med lik bredde -->
-        <div class="card kort border-0 shadow-lg">
-            <div class="card-body text-center">
-              <h4 class="card-title font-weight-bold">Hva er Wayfare?</h4>
-              <p class="card-text"Quick text to build up on the card title></p>
-              <h4><a href="info.php" class="card-link">Trykk her for å lære mer om Wayfare</a> </h4>
-            </div>
-        </div>
-    </div>
-    </div>
+function toggleAccordion(){
+  this.classList.toggle('active');
+  this.nextElementSibling.classList.toggle('active');
+}
 
-    <div class="col-sm-12 col-md-4"> <!-- Columns med lik bredde -->
-        <div class="card kort mb-4 border-0 shadow-lg">  <!-- Gir kortene mellomrom mellom hverandre slik at de blir bedre plass --> 
-            <div class="card-body text-center">
-              <h4 class="card-title font-weight-bold">Ofte stilte spørsmål </h4>
-              <p class="card-text"Quick text to build up on the card title></p>
-              <h4><a href="faq.php" class="card-link ">Trykk her for å se ofte stile spørsmål</a> </h4>
-            </div>
-        </div>
-    </div>
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>
 
-    <div class="col"> <!-- Columns med lik bredde -->
-      <div class="col"> <!-- Columns med lik bredde -->
-        <div class="card border-0 kort shadow-lg">
-            <div class="card-body text-center">
-              <h4 class="card-title font-weight-bold">Registrer bruker</h4>
-              <p class="card-text"Quick text to build up on the card title></p>
-              <h4><a href="registrer.html" class="card-link">Trykk her for å registere en ny bruker</a> </h4>
-            </div>
-        </div>
-    </div>
-    </div>
-</div>
-
-<div class="row mt-sm-4 mt-md-0"> <!-- Margin top small 4 og Margin top medium 0-->
-
-
-</div>
-
-</div>
-
+<!-- Footer -->
+<!-- Footer -->
 <?php 
   include_once "include/footer.php";
   ?>
+    <!-- Footer -->
+    <!-- Footer -->
+
+  </body>
+
+
+</html>
