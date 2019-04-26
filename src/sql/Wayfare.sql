@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 25. Apr, 2019 21:26 PM
+-- Generation Time: 26. Apr, 2019 12:05 PM
 -- Tjener-versjon: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -40,7 +40,7 @@ CREATE TABLE `Avtaler` (
 --
 
 CREATE TABLE `kjoreliste` (
-  `ID` int(11) NOT NULL,
+  `TurID` int(11) NOT NULL,
   `Fornavn` varchar(255) NOT NULL,
   `Etternavn` varchar(255) NOT NULL,
   `Start` varchar(255) NOT NULL,
@@ -48,36 +48,37 @@ CREATE TABLE `kjoreliste` (
   `Dato` date NOT NULL,
   `Pris` int(11) NOT NULL,
   `Klokkeslett` time DEFAULT NULL,
-  `Beskrivelse` text
+  `Beskrivelse` text,
+  `user_email` varchar(257) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dataark for tabell `kjoreliste`
 --
 
-INSERT INTO `kjoreliste` (`ID`, `Fornavn`, `Etternavn`, `Start`, `Slutt`, `Dato`, `Pris`, `Klokkeslett`, `Beskrivelse`) VALUES
-(1, 'Lars', 'Monsen', 'Notodden', 'Gvarv', '2019-02-15', 50, NULL, NULL),
-(2, 'Johannes', '', 'Gvarv', 'Skien', '2019-02-05', 190, '00:00:00', 'Skal frakte hest og vogn'),
-(3, 'Abraham', '', 'Lunde', 'Porsgrunn', '2019-02-05', 310, NULL, NULL),
-(4, 'Anette', '', 'Skien', 'Lunde', '2019-02-05', 140, NULL, NULL),
-(5, 'Abraham', '', 'Porsgrunn', 'Notodden', '2019-02-05', 355, NULL, NULL),
-(6, 'Lars', '', 'Brevik', 'Skien', '2019-02-05', 255, NULL, NULL),
-(7, 'Espen', '', 'Kragerø', 'Rjukan', '2019-02-05', 500, NULL, NULL),
-(8, 'Jonas', '', 'Notodden', 'Stathelle', '2019-02-05', 450, NULL, NULL),
-(9, 'Anders', '', 'Rjukan', 'Lunde', '2019-02-05', 250, NULL, NULL),
-(10, 'Elin', '', 'Stathelle', 'Gvarv', '2019-02-05', 175, NULL, NULL),
-(11, 'Hanna', '', 'Gvarv', 'Skien', '2019-02-05', 100, NULL, NULL),
-(12, 'Silje', '', 'Lunde', 'Notodden', '2019-02-05', 50, NULL, NULL),
-(13, 'Daglig', '', 'Oslo', 'BÃ¦rum', '0000-00-00', 142, NULL, NULL),
-(14, 'Peder', '', 'oslo', 'Bergen', '0000-00-00', 1000, NULL, NULL),
-(15, 'Peder', '', 'oslo', 'Bergen', '0000-00-00', 1000, NULL, NULL),
-(16, 'test', '', 'test', 'test', '0000-00-00', 0, NULL, NULL),
-(17, 'test', '', 'test', 'test', '0000-00-00', 0, NULL, NULL),
-(18, 'test', '', 'test', 'test', '0000-00-00', 0, NULL, NULL),
-(19, 'test', '', 'test', 'test', '0000-00-00', 0, NULL, NULL),
-(20, '', '', '', '', '0000-00-00', 0, NULL, NULL),
-(21, '', '', '', '', '0000-00-00', 0, NULL, NULL),
-(22, '', '', '', '', '0000-00-00', 0, NULL, NULL);
+INSERT INTO `kjoreliste` (`TurID`, `Fornavn`, `Etternavn`, `Start`, `Slutt`, `Dato`, `Pris`, `Klokkeslett`, `Beskrivelse`, `user_email`) VALUES
+(1, 'Lars', 'Monsen', 'Notodden', 'Gvarv', '2019-02-15', 50, NULL, NULL, NULL),
+(2, 'Johannes', '', 'Gvarv', 'Skien', '2019-02-05', 190, '00:00:00', 'Skal frakte hest og vogn', 'testen@test.com'),
+(3, 'Abraham', '', 'Lunde', 'Porsgrunn', '2019-02-05', 310, NULL, NULL, NULL),
+(4, 'Anette', '', 'Skien', 'Lunde', '2019-02-05', 140, NULL, NULL, NULL),
+(5, 'Abraham', '', 'Porsgrunn', 'Notodden', '2019-02-05', 355, NULL, NULL, NULL),
+(6, 'Lars', '', 'Brevik', 'Skien', '2019-02-05', 255, NULL, NULL, NULL),
+(7, 'Espen', '', 'Kragerø', 'Rjukan', '2019-02-05', 500, NULL, NULL, NULL),
+(8, 'Jonas', '', 'Notodden', 'Stathelle', '2019-02-05', 450, NULL, NULL, NULL),
+(9, 'Anders', '', 'Rjukan', 'Lunde', '2019-02-05', 250, NULL, NULL, NULL),
+(10, 'Elin', '', 'Stathelle', 'Gvarv', '2019-02-05', 175, NULL, NULL, NULL),
+(11, 'Hanna', '', 'Gvarv', 'Skien', '2019-02-05', 100, NULL, NULL, NULL),
+(12, 'Silje', '', 'Lunde', 'Notodden', '2019-02-05', 50, NULL, NULL, NULL),
+(13, 'Daglig', '', 'Oslo', 'BÃ¦rum', '0000-00-00', 142, NULL, NULL, NULL),
+(14, 'Peder', '', 'oslo', 'Bergen', '0000-00-00', 1000, NULL, NULL, NULL),
+(15, 'Peder', '', 'oslo', 'Bergen', '0000-00-00', 1000, NULL, NULL, NULL),
+(16, 'test', '', 'test', 'test', '0000-00-00', 0, NULL, NULL, NULL),
+(17, 'test', '', 'test', 'test', '0000-00-00', 0, NULL, NULL, NULL),
+(18, 'test', '', 'test', 'test', '0000-00-00', 0, NULL, NULL, NULL),
+(19, 'test', '', 'test', 'test', '0000-00-00', 0, NULL, NULL, NULL),
+(20, '', '', '', '', '0000-00-00', 0, NULL, NULL, NULL),
+(21, '', '', '', '', '0000-00-00', 0, NULL, NULL, NULL),
+(22, '', '', '', '', '0000-00-00', 0, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -86,7 +87,11 @@ INSERT INTO `kjoreliste` (`ID`, `Fornavn`, `Etternavn`, `Start`, `Slutt`, `Dato`
 --
 
 CREATE TABLE `Meldinger` (
-  `test` int(11) NOT NULL
+  `MeldingID` int(11) NOT NULL,
+  `user_email` varchar(257) DEFAULT NULL,
+  `user_email_kunde` varchar(256) DEFAULT NULL,
+  `TurID` int(11) DEFAULT NULL,
+  `Melding` varchar(256) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -119,7 +124,13 @@ INSERT INTO `users` (`user_first`, `user_email`, `user_tlf`, `user_brukertype`, 
 -- Indexes for table `kjoreliste`
 --
 ALTER TABLE `kjoreliste`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`TurID`);
+
+--
+-- Indexes for table `Meldinger`
+--
+ALTER TABLE `Meldinger`
+  ADD PRIMARY KEY (`MeldingID`);
 
 --
 -- Indexes for table `users`
@@ -135,7 +146,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `kjoreliste`
 --
 ALTER TABLE `kjoreliste`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `TurID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `Meldinger`
+--
+ALTER TABLE `Meldinger`
+  MODIFY `MeldingID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
