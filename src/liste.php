@@ -16,44 +16,9 @@
     </script>
 
     <!-- Navigasjons bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="#"><a href="index.php"><h1 class="logo">Wayfare</h1></a> <!-- Wayfare logo -->
-    
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Hjem</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profil.php">Profil</a>
-                    </li>
-    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
-                            Kontakt
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Product 1</a>
-                            <a class="dropdown-item" href="#">Product 2</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Another Product</a>
-                        </div>
-                    </li>
-    
-                   <?php 
-                    include_once "include/navcheck.php";
-                    ?>         
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="liste.php">Kjøreliste</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+   <?php 
+      include_once 'include/navbar.php';
+    ?>
        <!-- Navigasjons bar slutt -->
        <!--------------------------->
 
@@ -69,7 +34,13 @@
               echo '<a class="btn btn-primary btn-md" href="registrer.php" target="_blank">Vil du bli sjåfør?<i class="fa fa-download pl-2"></i></a>';
               
             ?>
-            <a class="btn btn-primary btn-md" href="listeinput.php" target="_blank">Trykk her for å legge til din kjørerute<i class="fa fa-download pl-2"></i></a>
+            <!-- <a class="btn btn-primary btn-md" href="listeinput.php" target="_blank">Trykk her for å legge til din kjørerute<i class="fa fa-download pl-2"></i></a> -->
+            <?php if(!isset($_SESSION['user_first'])) {
+              echo '<a class="btn btn-primary btn-md" href="login.php" target="_blank">Logg inn for å legge til kjørerute<i class="fa fa-download pl-2"></i></a>';
+            }
+            else 
+                echo ' <a class="btn btn-primary btn-md" href="listeinput.php" target="_blank">Trykk her for å legge til din kjørerute<i class="fa fa-download pl-2"></i></a>';
+            ?>
         </div>
 
         <div class="card mb-4">

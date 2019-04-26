@@ -12,7 +12,7 @@ function hentSjafor() {
   if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
   }  // Fornavn, Etternavn, Start, Slutt, Dato, Pris 
-  $sql = "SELECT * FROM kjoreliste where id='$key'";
+  $sql = "SELECT * FROM kjoreliste where TurId='$key'";
   $result = $conn->query($sql);
 
   if ($result->num_rows == 1) {
@@ -33,9 +33,9 @@ function hentSjafor() {
             </button>
           <br>
           <br>
-          <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#modal2'>
+          <!-- button type='button' class='btn btn-primary' data-toggle='modal' data-target='#modal2'>
               Velg Kjørerute
-            </button>"; 
+            </button-->"; 
 }
 echo "</table>";  
 
