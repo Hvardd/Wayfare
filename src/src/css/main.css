@@ -1,0 +1,462 @@
+
+/****************/
+/** Index CSS **/
+.logo{
+    color: white;
+}
+
+.indexContainer{
+    margin-bottom: 5vw;
+    margin-top: 10vw;
+    color: white;
+    text-shadow: 3px 2px 0px rgb(0, 0, 0); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+}
+
+.indexContainerWayfareText{
+    text-shadow: 3px 2px 0px rgb(0, 0, 0); /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+}
+
+
+body{
+    background-image: url("background.jpg");
+        /* Set background image to fixed (don't scroll along with the page) */
+        background-attachment: fixed;
+      
+        /* Center the background image */
+        background-position: center;
+      
+        /* Set the background image to no repeat */
+        background-repeat: no-repeat;
+      
+        /* Scale the background image to be as large as possible */
+        background-size: cover;
+        
+}
+
+.kort{
+    background-color:rgba(0, 0, 0, 0.3) !important;
+}
+
+
+
+/* CSS til Cardene */
+
+/** Index CSS Slutt **/
+/********************/
+
+/****************/
+/** Info CSS **/ 
+.paddingTB60 {
+    padding:60px 0px 60px 0px;
+}
+.hvit-bg {
+    background: #F1F1F1 !important;
+}
+.about-title h1 {
+    color: #535353; font-size:45px;font-weight:600;
+}
+.about-title span {
+    color: rgb(97, 120, 156); font-size:45px;font-weight:700;
+}
+.about-title h3 {
+    color: #535353; font-size:23px;margin-bottom:24px;
+}
+.about-title p {
+    color: #7a7a7a;line-height: 1.8;margin: 0 0 15px;
+}
+.about-paddingB {
+    padding-bottom: 12px;
+}
+.about-img {
+    padding-left: 57px;
+}
+
+/** Info CSS Slutt **/
+/********************/
+.liste{
+    height: 25vw;
+    overflow:scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+
+/****************/
+/** Kontakt CSS **/
+.kontaktBody{
+    background-image: none;
+}
+.kontaktJumbotron {
+    background: #c82021;
+    color: black;
+    border-radius: 0px;
+    }
+.jumbotron-sm { padding-top: 12px;
+    padding-bottom: 12px; }
+.jumbotron small {
+    color: black;
+    }
+.h1{
+        color: black;
+    }
+.button {
+    border-radius: 3px;
+    }
+.button.hover {
+background: #c82021;
+color: #358CCE;
+    }   
+
+.kontaktContainer{
+    color: white;
+}
+
+/** Kontakt CSS Slutt **/
+/********************/
+
+
+/****************/
+/** FAQ CSS **/
+
+.faqBody{
+    background-image: none;
+}
+
+.faqcontainer {
+    margin: 0 auto;
+    padding: 4rem;
+    width: 48rem;
+  }
+  
+  .faqcontainer h3 {
+    font-size: 1.75rem;
+    color: #373d51;
+    padding: 1.3rem;
+    margin: 0;
+  }
+  
+  .accordion a {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    color: #7288a2;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .accordion a:hover,
+  .accordion a:hover::after {
+    cursor: pointer;
+    color: #0333d2;
+  }
+  
+  .accordion a:hover::after {
+    border: 1px solid #395ab6;
+  }
+  
+  .accordion a.active {
+    color: #394aad;
+    border-bottom: 1px solid #2a528f;
+  }
+  
+  .accordion a::after {
+    font-family: 'Ionicons';
+    content: '\f218';
+    position: absolute;
+    float: right;
+    right: 1rem;
+    font-size: 1rem;
+    color: #7288a2;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #7288a2;
+    text-align: center;
+  }
+  
+  .accordion a.active::after {
+    font-family: 'Ionicons';
+    content: '\f209';
+    color: #394aad;
+    border: 1px solid #03b5d2;
+  }
+  
+  .accordion .content {
+    opacity: 0;
+    padding: 0 1rem;
+    max-height: 0;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    clear: both;
+    -webkit-transition: all 0.2s ease 0.15s;
+    -o-transition: all 0.2s ease 0.15s;
+    transition: all 0.2s ease 0.15s;
+  }
+  
+  .accordion .content p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .accordion .content.active {
+    opacity: 1;
+    padding: 1rem;
+    max-height: 100%;
+    -webkit-transition: all 0.35s ease 0.15s;
+    -o-transition: all 0.35s ease 0.15s;
+    transition: all 0.35s ease 0.15s;
+  }
+  
+  .ftr{
+      text-align: center;
+      margin-top: 20px;
+  }
+/** FAQ CSS Slutt **/
+/********************/
+
+/****************/
+/** Kjørerute Avansert Informasjon CSS **/
+.sjåførKort {
+  font-family: 'Helvetica', sans-serif, 'Ariel';
+  position: relative;
+  background: #ffffff;
+  color: #555555;
+  margin: 50px auto;
+  width: 850px;
+  max-width: 900px;
+  min-height: 300px;
+  padding: 30px 290px 30px 30px;
+  -moz-box-shadow: -5px 5px 15px;
+  -webkit-box-shadow: -5px 5px 15px;
+  box-shadow: -5px 5px 15px;
+  border-radius: 5px;
+}
+.sjåførKort #kort-content {
+  opacity: 1;
+  width: 100%;
+  display: table;
+  transition: all 500ms ease-out;
+  position: relative;
+}
+.sjåførKort .movie-title .movie-year {
+  margin-left: 12px;
+  font-size: 16px;
+}
+.sjåførKort .movie-title a {
+  color: #333333;
+  text-decoration: none;
+}
+.sjåførKort .movie-details {
+  font-size: 12px;
+  padding-bottom: 24px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #dbdbdb;
+}
+.sjåførKort .movie-details span {
+  padding: 0px 6px;
+  border-right: 1px solid #dbdbdb;
+}
+.sjåførKort .movie-details span:last-child {
+  border: none;
+}
+.sjåførKort .movie-castcrew {
+  padding-top: 12px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sjåførKort .movie-castcrew span.title {
+  color: #333333;
+  display: inline-block;
+  width: 80px;
+  font-weight: 600;
+}
+.sjåførKort .movie-synopsis {
+  margin: 24px 0px;
+  padding-top: 24px;
+  border-top: 1px solid #dbdbdb;
+  max-height: 130px;
+  height: 130px;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+
+
+
+/** Kjørerute Avansert Informasjon CSS Slutt **/
+/********************/
+
+
+
+/***************/
+/* Profil CSS */
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
+}
+
+
+/* Profil CSS Slutt*/
+/******************/
+
+
+
+/*******************/
+/* Login side CSS */
+.form-container{
+    margin-top: 5vw;
+    background-color: #fff;
+    width: 6w;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    margin-bottom: 25vw;
+}
+
+.loginBody{
+    overflow: hidden;
+  }
+
+
+/* Login side CSS Slutt*/
+/**********************/
+/******************/
+/** Registrer CSS*/
+
+.registerArticle{
+    box-shadow: 0px 0px 10px 0px #000000;
+    background-color: white;
+    margin-top: 6vw;
+}
+
+.registerContainer{
+    margin-bottom: 15vw;
+}
+/** Registrer CSS Slutt **/
+/************************/
+
+/* Footer */
+.footer{
+    position: relative;
+    clear:both;
+    padding-top:20px;
+}
+
+.extendedFooter{
+    margin-top: 50%;
+}
+
+* {
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: 100%;
+    margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+
+
